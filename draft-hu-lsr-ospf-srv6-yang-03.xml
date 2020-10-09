@@ -10,7 +10,7 @@
 <?rfc inline="yes"?>
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
-<rfc category="std" docName="draft-hu-lsr-ospf-srv6-yang-02" ipr="trust200902">
+<rfc category="std" docName="draft-hu-lsr-ospf-srv6-yang-03" ipr="trust200902">
   <front>
     <title abbrev="YANG Data Model for OSPF SRv6">YANG Data Model for OSPF
     SRv6</title>
@@ -109,8 +109,7 @@
 
     <abstract>
       <t>This document defines a YANG data model that can be used to configure
-      and manage OSPFv3 SRv6 <xref
-      target="I-D.ietf-lsr-ospfv3-srv6-extensions"> </xref>.</t>
+      and manage OSPFv3 SRv6.</t>
     </abstract>
 
     <note title="Requirements Language">
@@ -133,8 +132,12 @@
       interfaces, such as CLI and programmatic APIs.</t>
 
       <t>This document defines a YANG data model that can be used to configure
-      and manage OSPFv3 SRv6 and it is an augmentation to the OSPF YANG data
-      model.</t>
+      and manage OSPFv3 SRv6  <xref target="I-D.ietf-lsr-ospfv3-srv6-extensions"/> 
+      and it is an augmentation to the OSPF YANG data model <xref
+      target="I-D.ietf-ospf-yang"/>.</t>
+
+      <t>The YANG modules in this document conform to the Network Management
+      Datastore Architecture (NMDA) <xref target="RFC8342"/>.</t>
     </section>
 
     <section title="OSPFv3 SRv6">
@@ -143,7 +146,8 @@
 
       <t>The OSPFv3 SRv6 YANG module requires support of OSPF base model <xref
       target="I-D.ietf-ospf-yang"/> which defines basic OSPF configuration and
-      state.</t>
+      state and YANG model for OSPFv3 Extended LSAs 
+      <xref target="I-D.ietf-lsr-ospfv3-extended-lsa-yang"/>.</t>
 
       <t>The figure below describes the overall structure of the ospfv3-srv6
       YANG module:</t>
@@ -988,7 +992,7 @@ module ietf-ospfv3-srv6 {
   </middle>
 
   <back>
-    <references title="References">
+    <references title="Normative References">
       <?rfc include="reference.I-D.ietf-lsr-ospfv3-srv6-extensions"?>
 
       <?rfc include="reference.RFC.2119"?>
@@ -1004,6 +1008,10 @@ module ietf-ospfv3-srv6 {
       <?rfc include="reference.RFC.6536"?>
 
       <?rfc include="reference.RFC.3688"?>
+
+      <?rfc include="reference.RFC.8342"?>
+      
+      <?rfc include="reference.I-D.ietf-lsr-ospfv3-extended-lsa-yang"?>
     </references>
   </back>
 </rfc>
